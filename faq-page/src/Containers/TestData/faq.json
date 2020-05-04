@@ -1,0 +1,110 @@
+[
+  {
+    "id": 0,
+    "question": "How much is a website?"
+  },
+  {
+    "id": 1,
+    "question": "How long does it take to make a website?"
+  },
+  {
+    "id": 2,
+    "question": "Should I hire someone to make my website?"
+  },
+  {
+    "id": 3,
+    "question": "How will I update my own website?"
+  },
+  {
+    "id": 4,
+    "question": "How do I make money with my website?"
+  },
+  {
+    "id": 5,
+    "question": "Can I see how many visitors go to my website?"
+  },
+  {
+    "id": 6,
+    "question": "Can I get my own email with my website?"
+  },
+  {
+    "id": 7,
+    "question": "Can I have a shopping cart?"
+  },
+  {
+    "id": 8,
+    "question": "How will people find my website?"
+  },
+  {
+    "id": 9,
+    "question": "Who owns my website, me or you?"
+  },
+  {
+    "id": 10,
+    "question": "Add Social Media buttons to your sidebar or footer, making it easy for your readers to share your work with their friends."
+  },
+  {
+    "id": 11,
+    "question": "Add embeds from Pinterest, SoundCloud and YouTube!"
+  },
+  {
+    "id": 12,
+    "question": "Embed a Tweet directly into a Post for commentary."
+  },
+  {
+    "id": 13,
+    "question": "Integrate your Instagram account with your WordPress.com site."
+  },
+  {
+    "id": 14,
+    "question": "What is WordPress.com?"
+  },
+  {
+    "id": 15,
+    "question": "Why was I charged?"
+  },
+  {
+    "id": 16,
+    "question": "How do I contact you?"
+  },
+  {
+    "id": 17,
+    "question": "I want to cancel."
+  },
+  {
+    "id": 18,
+    "question": "I need an invoice"
+  },
+  {
+    "id": 19,
+    "question": "What about Akismet, VaultPress, and Crowdsignal?"
+  },
+  {
+    "id": 20,
+    "question": "Where can I find the transaction ID?"
+  },
+  {
+    "id": 21,
+    "question": "There are black borders on my screen, what do I do?"
+  },
+  {
+    "id": 22,
+    "question": "I am unable to send or receive email?"
+  },
+  {
+    "id": 23,
+    "question": "I can't receive any email attachments?"
+  },
+  {
+    "id": 24,
+    "question": "Are spaces allowed in email addresses?"
+  },
+  {
+    "id": 25,
+    "question": "I can't connect to my network drive anymore?"
+  },
+  {
+    "id": 26,
+    "question": "How do I delete Internet cookies?"
+  }
+]

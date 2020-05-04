@@ -1,0 +1,332 @@
+/** ------------ Global ------------ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+$breakpoint-desktop: 1366px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 360px;
+
+@mixin displayFlex($direction, $horizontal-spacing, $vertical-spacing) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $horizontal-spacing;
+  align-items: $vertical-spacing;
+}
+
+@mixin absoluteCentering($fromTop, $fromLeft, $x-axis, $y-axis) {
+  position: absolute;
+  top: $fromTop;
+  left: $fromLeft;
+  transform: translate($x-axis, $y-axis);
+}
+
+@mixin cta-btn {
+  width: 150px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  margin-top: 15px;
+  background-color: #e59500;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+@mixin fontConfig($hue, $char-spacing, $transform, $weight) {
+  color: $hue;
+  letter-spacing: $char-spacing;
+  text-transform: $transform;
+  font-weight: $weight;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: content-box;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: 1.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  text-align: center;
+}
+
+h1 {
+  padding: 10px 0 0 10px;
+  height: 50px;
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+p {
+  line-height: 140%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/** ------------ Navigation ------------ */
+nav {
+  @include displayFlex(row, center, center);
+  height: 50px;
+  width: 80%;
+  margin: auto;
+  padding: 0 10px 0 0;
+
+  label {
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 800;
+  }
+
+  ul {
+    display: none;
+  }
+
+  span {
+    text-align: right;
+    font-size: 22px;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    ul {
+      @include displayFlex(row, space-evenly, center);
+      width: 40%;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
+
+/** ------------ Header ------------ */
+header {
+  position: relative;
+  height: 50vh;
+  background-image: linear-gradient(
+    to right top,
+    #90c5e7,
+    #81b6d8,
+    #72a8ca,
+    #6399bb,
+    #548bad,
+    #4a81a3,
+    #41789a,
+    #376e90,
+    #316688,
+    #2a5f80,
+    #245779,
+    #1d5071
+  );
+
+  .container {
+    @include displayFlex(column, space-evenly, center);
+    @include absoluteCentering(50%, 50%, -50%, -50%);
+    width: 100%;
+    height: 180px;
+
+    h1 {
+      @include fontConfig(#ffffff, 2px, uppercase, 700);
+    }
+
+    h4 {
+      @include fontConfig(#ffffff, 1.5px, captialize, 100);
+      font-size: 12px;
+      line-height: 160%;
+      width: 75%;
+    }
+
+    input {
+      margin-top: 15px;
+      width: 275px;
+      height: 40px;
+      border-radius: 30px;
+      border: none;
+      padding-left: 15px;
+    }
+  }
+}
+/** ------------ Topics ------------ */
+#topics {
+  width: 80%;
+  height: 100%;
+  padding: 15px;
+  margin: auto;
+
+  h1 {
+    padding: 10px 0 0 10px;
+    height: 50px;
+  }
+
+  ul {
+    @media (min-width: $breakpoint-tablet) {
+      @include displayFlex(row, space-evenly, center);
+      width: 100%;
+    }
+
+    li.card {
+      @include displayFlex(column, space-between, center);
+      width: 275px;
+      height: 200px;
+      margin: 15px auto;
+      padding: 25px 5px 25px 5px;
+      cursor: pointer;
+      background-color: #ffffff;
+
+      @media (min-width: $breakpoint-tablet) {
+        width: 215px;
+        height: 190px;
+        padding: 10px 15px 10px 15px;
+
+        p {
+          font-size: 12px;
+        }
+      }
+
+      .icon {
+        width: auto;
+        height: 80px;
+        margin-top: 15px;
+        position: relative;
+
+        .i {
+          @include absoluteCentering(50%, 65%, -50%, -50%);
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
+
+/** ------------ FAQ ------------ */
+#faq {
+  background-color: #f5f0f4;
+  padding: 15px 0 15px 0;
+  ul {
+    @include displayFlex(column, space-evenly, center);
+
+    .question {
+      @include displayFlex(column, center, center);
+      width: 75%;
+      height: 30px;
+      padding: 15px 0 15px 0;
+      margin: 10px 0 10px 0;
+      background-color: #ffffff;
+      transition: all ease-in-out 1s;
+
+      &.open {
+        height: 290px;
+        transition: all 1s ease-in-out;
+      }
+
+      .topic {
+        display: flex;
+
+        h3 {
+          width: 85%;
+          margin-right: 2px;
+        }
+
+        span {
+          font-size: 12px;
+          padding-right: 15px;
+          cursor: pointer;
+          width: initial;
+        }
+      }
+      .anwser {
+        display: none;
+        width: 85%;
+        padding: 0 15px 0 15px;
+
+        p {
+          opacity: 0;
+          transition: all 1s ease-in-out 1s;
+        }
+
+        &.open {
+          display: contents;
+
+          p {
+            margin-top: 15px;
+            width: 85%;
+            font-size: small;
+            opacity: 1;
+            transition: all 1s ease-in-out 1s;
+          }
+        }
+      }
+    }
+  }
+
+  li {
+    cursor: pointer;
+  }
+}
+
+/** ------------ HELP ------------ */
+#help {
+  position: relative;
+
+  .container {
+    @include displayFlex(column, center, center);
+    padding: 15px 0 15px 0;
+
+    h1,
+    h4 {
+      padding: 10px 15px 10px 15px;
+    }
+
+    button {
+      @include cta-btn;
+    }
+  }
+}
+
+/** ------------ Footer ------------ */
+footer {
+  width: 75%;
+  margin: auto;
+  padding: 15px 0 15px 0;
+
+  a {
+    color: #b9aeae;
+  }
+
+  .wrapper {
+    height: 30px;
+    align-items: center;
+    margin: 10px auto;
+
+    li {
+      text-align: center;
+    }
+
+    &.top {
+      width: 175px;
+      justify-content: space-evenly;
+    }
+
+    &.bottom {
+      width: 200px;
+      justify-content: space-evenly;
+    }
+  }
+  .listStyles {
+    display: flex;
+  }
+}
